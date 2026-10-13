@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Respuesta y Renderizado HTML5</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="index.html"> Cómo funciona la Web</a>
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="solicitud.html">Solicitud HTTP</a></li>
+                        <li class="nav-item"><a class="nav-link" href="servidor.html">Procesamiento en servidor</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="respuesta.html">Respuesta y renderizado</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ejemplo.html">Ejemplo práctico</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container text-center mt-5">
+            <div class="d-flex align-items-center justify-content-center">
+                <span class="display-1 me-3"></span>
+                <div>
+                    <span class="badge bg-purple text-white fs-6" style="background-color: #6f42c1;">✨ Renderizado</span>
+                    <h1 class="mt-1 display-5">Paso 4: Respuesta y Renderizado HTML5</h1>
+                    <p class="lead">Ejemplo de uso de etiquetas semánticas en HTML5</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container my-4">
+        <!-- Introducción -->
+        <div class="alert alert-success shadow-sm" role="alert">
+            <strong>✅ El navegador recibe la respuesta</strong> y comienza a renderizar la página interpretando el código HTML, CSS y JavaScript.
+        </div>
+
+        <!-- Grid de elementos semánticos -->
+        <section class="mb-5">
+            <h2 class="text-center mb-4">Elementos Semánticos de HTML5</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-primary">
+                        <div class="card-header bg-primary text-white">
+                            <h5 class="mb-0">&lt;header&gt;</h5>
+                        </div>
+                        <div class="card-body">
+                            <p>Representa la cabecera de una página o sección. Contiene títulos, logotipos o navegación.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-success">
+                        <div class="card-header bg-success text-white">
+                            <h5 class="mb-0">&lt;nav&gt;</h5>
+                        </div>
+                        <div class="card-body">
+                            <p>Contiene enlaces de navegación principales del sitio.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-danger">
+                        <div class="card-header bg-danger text-white">
+                            <h5 class="mb-0">&lt;main&gt;</h5>
+                        </div>
+                        <div class="card-body">
+                            <p>Contiene el contenido principal y único del documento.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-warning">
+                        <div class="card-header bg-warning text-dark">
+                            <h5 class="mb-0">&lt;section&gt;</h5>
+                        </div>
+                        <div class="card-body">
+                            <p>Agrupa contenido relacionado dentro de una página.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-info">
+                        <div class="card-header bg-info text-dark">
+                            <h5 class="mb-0">&lt;article&gt;</h5>
+                        </div>
+                        <div class="card-body">
+                            <p>Representa contenido independiente y reutilizable (blogs, noticias, etc.).</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-secondary">
+                        <div class="card-header bg-secondary text-white">
+                            <h5 class="mb-0">&lt;footer&gt;</h5>
+                        </div>
+                        <div class="card-body">
+                            <p>Representa el pie de página de un documento o sección.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Aside con dato importante -->
+        <aside class="mb-5">
+            <div class="card border-info shadow-sm">
+                <div class="card-body">
+                    <h2 class="card-title text-info"> Dato Importante</h2>
+                    <p class="card-text fs-5">
+                        Las etiquetas semánticas ayudan a mejorar la <strong>accesibilidad</strong>, el <strong>posicionamiento SEO</strong> y la <strong>organización del código</strong>.
+                    </p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Código formateado -->
+        <section class="mb-5">
+            <h2>Muestra de Código HTML Formateado</h2>
+            <div class="bg-dark text-light p-3 rounded shadow">
+                <pre class="mb-0"><code>&lt;header&gt;
+    &lt;h1&gt;Mi Sitio Web&lt;/h1&gt;
+&lt;/header&gt;
+&lt;nav&gt;
+    &lt;a href="#"&gt;Inicio&lt;/a&gt;
+    &lt;a href="#"&gt;Contacto&lt;/a&gt;
+&lt;/nav&gt;
+&lt;main&gt;
+    &lt;section&gt;
+        &lt;h2&gt;Contenido Principal&lt;/h2&gt;
+        &lt;p&gt;Texto de ejemplo.&lt;/p&gt;
+    &lt;/section&gt;
+&lt;/main&gt;
+&lt;footer&gt;
+    &lt;p&gt;2026 Mi Sitio Web&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+            </div>
+        </section>
+
+        <!-- Acordeón (componente adicional) -->
+        <section class="mb-5">
+            <h2 class="text-center mb-4">Preguntas Frecuentes</h2>
+            <div class="accordion shadow-sm" id="faqAccordion">
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                            ¿Qué significa renderizar?
+                        </button>
+                    </h3>
+                    <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Renderizar es el proceso mediante el cual el navegador interpreta el código HTML, CSS y JavaScript para construir y mostrar la página visualmente en la pantalla.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                            ¿Por qué usar etiquetas semánticas?
+                        </button>
+                    </h3>
+                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Mejoran la accesibilidad para lectores de pantalla, ayudan a los motores de búsqueda a entender mejor el contenido y hacen el código más legible y mantenible.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                            ¿Qué pasa si no uso etiquetas semánticas?
+                        </button>
+                    </h3>
+                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Sin etiquetas semánticas, el HTML pierde significado estructural, lo que dificulta la accesibilidad y puede afectar negativamente el posicionamiento SEO.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Botones navegación -->
+        <div class="d-flex justify-content-between mt-5">
+            <a href="servidor.html" class="btn btn-outline-secondary">← Paso 3</a>
+            <a href="ejemplo.html" class="btn btn-primary">Ver Ejemplo Práctico →</a>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <p class="mb-0">Proyecto educativo - Cómo funciona la Web</p>
+    </footer>
+
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

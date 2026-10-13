@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procesamieento en el Servidor</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="index.html"> Cómo funciona la Web</a>
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="solicitud.html">Solicitud HTTP</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="servidor.html">Procesamiento en servidor</a></li>
+                        <li class="nav-item"><a class="nav-link" href="respuesta.html">Respuesta y renderizado</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ejemplo.html">Ejemplo práctico</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container text-center mt-5">
+                    <span class="badge bg-danger fs-6"> Servidor</span>
+                    <h1 class="mt-1 display-5">Paso 3: El servidor recibe, procesa y prepara la respuesta</h1>
+                    <p class="lead">Procesamiento en el Servidor Web</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container my-4">
+        <!-- ¿Qué ocurre? -->
+        <section class="mb-5">
+            <h2>¿Qué ocurre en el servidor?</h2>
+            <div class="alert alert-secondary">
+                <p class="fs-5">
+                    Cuando el servidor recibe la solicitud HTTP enviada por el navegador, su trabajo es interpretar qué se le pide. Primero revisa la URL y el método (GET, POST, etc.), luego localiza el recurso solicitado (puede ser un archivo HTML, una imagen, o un programa que genera contenido dinámico). Si el recurso existe, el servidor lo prepara y lo envía de vuelta junto con cabeceras que indican el tipo de contenido, el tamaño, y el código de estado. Todo esto ocurre en milisegundos.
+                </p>
+            </div>
+        </section>
+
+        <!-- Pasos en cards -->
+        <section class="mb-5">
+            <h2 class="text-center mb-4">¿Qué hace el servidor?</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card h-100 shadow-sm border-primary">
+                        <div class="card-body">
+                            <h5 class="card-title"><span class="badge bg-primary rounded-pill me-2">1</span>Recibe la petición HTTP</h5>
+                            <p class="card-text">El servidor escucha en el puerto 80 (HTTP) o 443 (HTTPS) y recibe la solicitud del navegador.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100 shadow-sm border-success">
+                        <div class="card-body">
+                            <h5 class="card-title"><span class="badge bg-success rounded-pill me-2">2</span>Identifica el recurso</h5>
+                            <p class="card-text">Localiza el archivo o recurso solicitado (HTML, CSS, imagen, etc.) en el sistema de archivos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100 shadow-sm border-warning">
+                        <div class="card-body">
+                            <h5 class="card-title"><span class="badge bg-warning text-dark rounded-pill me-2">3</span>Ejecuta código (si es dinámico)</h5>
+                            <p class="card-text">Si es una aplicación dinámica, ejecuta PHP, Python, Node.js u otro lenguaje para generar contenido.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100 shadow-sm border-info">
+                        <div class="card-body">
+                            <h5 class="card-title"><span class="badge bg-info text-dark rounded-pill me-2">4</span>Genera respuesta</h5>
+                            <p class="card-text">Prepara el contenido y añade cabeceras HTTP antes de enviarlo al navegador.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ejemplo de encabezado -->
+        <section class="mb-5">
+            <h2>Ejemplo de encabezado de respuesta</h2>
+            <div class="bg-dark text-light p-3 rounded shadow">
+                <pre class="mb-0"><code>HTTP/1.1 200 OK
+Content-Type: text/html; charset=UTF-8
+Content-Length: 1250
+Server: Apache/2.4</code></pre>
+            </div>
+        </section>
+
+        <!-- Códigos de estado -->
+        <section class="mb-5">
+            <h2>Códigos de estado comunes</h2>
+            <p>Los códigos de estado HTTP son números de 3 dígitos que el servidor devuelve al navegador para decir qué pasó con su solicitud.</p>
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <div class="card border-success shadow-sm">
+                        <div class="card-body text-center">
+                            <h3 class="text-success">200 OK</h3>
+                            <p>Todo correcto, el servidor envía la página</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-danger shadow-sm">
+                        <div class="card-body text-center">
+                            <h3 class="text-danger">404 Not Found</h3>
+                            <p>Recurso no existe (página no encontrada)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-warning shadow-sm">
+                        <div class="card-body text-center">
+                            <h3 class="text-warning">500 Internal Server Error</h3>
+                            <p>Error interno del servidor</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Imagen -->
+        <section class="text-center mb-5">
+            <h2>Cliente - Servidor</h2>
+            <img src="img/ClienteServidor.png"
+                alt="Diagrama de comunicación cliente-servidor"
+                class="img-fluid rounded shadow">
+        </section>
+
+        <!-- Botones navegación -->
+        <div class="d-flex justify-content-between mt-5">
+            <a href="solicitud.html" class="btn btn-outline-secondary">← Paso 2</a>
+            <a href="respuesta.html" class="btn btn-primary">Continuar al Paso 4 →</a>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <p class="mb-0">Proyecto educativo - Cómo funciona la Web</p>
+    </footer>
+
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

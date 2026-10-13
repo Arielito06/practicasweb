@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bitnami.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Solicitud HTTP</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="index.html">
+                     Cómo funciona la Web
+                </a>
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="solicitud.html">Solicitud HTTP</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="servidor.html">Procesamiento en servidor</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="respuesta.html">Respuesta y renderizado</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ejemplo.html">Ejemplo práctico</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container text-center mt-5">
+            <span class="badge bg-warning text-dark fs-6">
+                         HTTP
+            </span>
+            <h1 class="mt-1 display-5">
+             Paso 2: El navegador pide la página al servidor
+            </h1>
+            <p class="lead">Solicitud HTTP</p>
+        </div>
+        </div>
+    </header>
+
+    <main class="container my-4">
+        <!-- Badge informativo -->
+        <div class="d-flex justify-content-center gap-2 mb-4">
+            <span class="badge bg-primary fs-6">GET</span>
+            <span class="badge bg-success fs-6">POST</span>
+            <span class="badge bg-info text-dark fs-6">PUT</span>
+            <span class="badge bg-danger fs-6">DELETE</span>
+        </div>
+
+        <!-- Tabla comparativa -->
+        <section class="mb-5">
+            <h2 class="text-center mb-4">Métodos GET y POST</h2>
+            <div class="table-responsive">
+                <table class="table table-striped table-bordered table-hover shadow-sm">
+                    <thead class="table-primary">
+                        <tr>
+                            <th>Método</th>
+                            <th>Descripción</th>
+                            <th>Cuándo se usa</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong class="text-primary">GET</strong></td>
+                            <td>Solicita datos sin modificar el servidor. Los parámetros van en la URL.</td>
+                            <td>Cargar páginas, imágenes, búsquedas, enlaces</td>
+                        </tr>
+                        <tr>
+                            <td><strong class="text-success">POST</strong></td>
+                            <td>Envía datos en el cuerpo de la petición. No se ven en la URL.</td>
+                            <td>Formularios de login, registro, comentarios, subir archivos</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Ejemplo código -->
+        <section class="mb-5">
+            <h2>Ejemplo de solicitud GET</h2>
+            <div class="bg-dark text-light p-3 rounded shadow">
+                <pre class="mb-0"><code>GET /index.html HTTP/1.1
+Host: www.ejemplo.com
+User-Agent: Chrome/120.0
+Accept: text/html</code></pre>
+            </div>
+        </section>
+
+        <!-- Definición -->
+        <section class="mb-5">
+            <div class="card border-primary shadow-sm">
+                <div class="card-body">
+                    <h2 class="card-title">Definición</h2>
+                    <p class="card-text">
+                        HTTP define varios métodos de petición que indican la acción deseada sobre un recurso. Además de GET y POST, existen otros como PUT, DELETE, HEAD, CONNECT, OPTIONS, TRACE y PATCH. Cada uno tiene una semántica diferente: algunos son <strong>seguros</strong> (no modifican datos), otros son <strong>idempotentes</strong> donde varias solicitudes iguales producen el mismo resultado.
+                    </p>
+                    <a href="https://tecsify.com/blog/metodos-http/" target="_blank" class="btn btn-outline-primary">
+                        🔗 Ver más sobre métodos HTTP
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Imagen -->
+        <section class="text-center mb-5">
+            <h2>Flujo de solicitud HTTP</h2>
+            <img src="img/SolicitudHTTP.png"
+                alt="Diagrama del flujo de solicitud HTTP entre el navegador y el servidor"
+                class="img-fluid rounded shadow">
+        </section>
+
+        <!-- Botones navegación -->
+        <div class="d-flex justify-content-between mt-5">
+            <a href="index.html" class="btn btn-outline-secondary">← Paso 1</a>
+            <a href="servidor.html" class="btn btn-primary">Continuar al Paso 3 →</a>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <p class="mb-0">Proyecto educativo - Cómo funciona la Web</p>
+    </footer>
+
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Qué ocurre al ingresar una URL?</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+        
+</head>
+<body>
+    <header>        
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="index.html">
+                    Cómo funciona la Web
+                </a>
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="solicitud.html">Solicitud HTTP</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="servidor.html">Procesamiento en servidor</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="respuesta.html">Respuesta y renderizado</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ejemplo.html">Ejemplo práctico</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container text-center mt-5">
+            <!-- Logo y título centrado -->
+            <div class="d-flex align-items-center justify-content-center">
+                <img src="img/url.png" alt="Logo URL" width="80" class="me-3">
+                <div>
+                    <span class="badge bg-success fs-6">
+                        HTML5
+                    </span>
+                    <h1 class="mt-1">
+                        Paso 1: El usuario escribe una dirección en el navegador
+                    </h1>
+                    <p class="lead">
+                        ¿Qué ocurre al ingresar una URL?
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+   
+    <main class="container my-1">
+        <!-- Alerta -->
+        <div class="alert alert-info shadow-sm" role="alert">
+            <strong>¿Sabías qué?</strong> El proceso completo de cargar una página web suele realizarse en menos de un segundo.
+        </div>
+
+        <!-- Explicación -->
+        <section class="mb-5">
+            <h2>Explicación</h2>
+            <p>
+                Cuando ingresas una URL en el navegador, este primero consulta un servidor DNS para traducir el nombre de la página como "google.com" a una dirección IP numérica, que es la ubicación real del servidor donde está alojada la web. Luego, el navegador se conecta con ese servidor y le solicita la página mediante un mensaje HTTP.
+                El servidor responde enviando el código HTML, CSS, JavaScript e imágenes, y el navegador interpreta ese código para organizar los elementos, aplicar los estilos, ejecutar las interacciones y finalmente mostrar la página completa en tu pantalla. Todo este proceso ocurre en fracciones de segundo.
+            </p>
+        </section>
+
+        <!-- Imagen -->
+        <section class="mb-5 text-center">
+            <h2>Esquema Visual</h2>
+            <img src="img/Esquema.png"
+                alt="Esquema Visual URL"
+                class="img-fluid rounded shadow">
+            <p class="mt-3">
+                <small>Imagen ilustrativa: desde el usuario hasta el servidor.</small>
+            </p>
+        </section>
+
+        <!-- Cards -->
+        <section>
+            <h2 class="mb-4 text-center">
+                Partes de una URL
+            </h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title"> Protocolo</h5>
+                            <p class="card-text">Es la regla de comunicación entre el navegador y el servidor.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title"> Dominio</h5>
+                            <p class="card-text">Es el nombre único que identifica un sitio web.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Ruta</h5>
+                            <p class="card-text">Indica la ubicación específica dentro del sitio web, como una carpeta o archivo.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Parámetros</h5>
+                            <p class="card-text">Son datos adicionales que se envían al servidor.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Botón -->
+        <div class="text-center mt-5">
+            <a href="solicitud.html" class="btn btn-primary btn-lg">
+                Continuar al Paso 2 →
+            </a>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <p class="mb-0">
+            Proyecto educativo - Cómo funciona la Web
+        </p>
+    </footer>
+
+    <!-- Bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

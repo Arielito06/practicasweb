@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo práctico: Mini página renderizada</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="index.html">Cómo funciona la Web</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="solicitud.html">Solicitud HTTP</a></li>
+                        <li class="nav-item"><a class="nav-link" href="servidor.html">Procesamiento en servidor</a></li>
+                        <li class="nav-item"><a class="nav-link" href="respuesta.html">Respuesta y renderizado</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="ejemplo.html">Ejemplo práctico</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container text-center mt-4 mt-md-5">
+            <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center">
+                <span class="display-3 me-0 me-sm-3 mb-2 mb-sm-0"></span>
+                <div>
+                    <span class="badge bg-primary fs-6"> Práctico</span>
+                    <h1 class="mt-1 display-6 display-md-5">Ejemplo práctico</h1>
+                    <p class="lead fs-6">Una página web sencilla creada en HTML5</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container my-3 my-md-4">
+        <!-- Presentación: foto izquierda + texto + redes -->
+        <div class="card shadow-sm mb-4">
+            <div class="card-body p-3 p-md-4">
+                <div class="d-flex flex-column flex-md-row align-items-center align-items-md-start gap-3">
+                    <img src="img/ejemplo.png" alt="Foto de Ariel Guamán" class="rounded-circle shadow-sm" style="width:120px;height:120px;object-fit:cover;flex-shrink:0;">
+                    <div class="text-center text-md-start">
+                        <h2 class="h4 mb-1"> Hola, soy Ariel Guamán</h2>
+                        <p class="text-muted mb-2">Estudiante de Ingeniería en TI - UTPL</p>
+                        <div class="d-flex flex-wrap justify-content-center justify-content-md-start gap-2">
+                            <a href="https://www.facebook.com/anthonioarielcastillo/?locale=es_LA" class="btn btn-primary btn-sm">📘 Facebook</a>
+                            <a href="https://www.instagram.com/" class="btn btn-danger btn-sm">📸 Instagram</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hobbies -->
+        <h2 class="text-center h4 mb-3"> Mis Hobbies</h2>
+        <div class="row g-2 g-md-3 mb-4">
+            <div class="col-4 col-md-3 col-lg-2"><div class="card text-center shadow-sm h-100"><div class="card-body p-2 p-md-3"><span class="display-6">📚</span><p class="mb-0 small">Leer</p></div></div></div>
+            <div class="col-4 col-md-3 col-lg-2"><div class="card text-center shadow-sm h-100"><div class="card-body p-2 p-md-3"><span class="display-6">🎵</span><p class="mb-0 small">Música</p></div></div></div>
+            <div class="col-4 col-md-3 col-lg-2"><div class="card text-center shadow-sm h-100"><div class="card-body p-2 p-md-3"><span class="display-6">⚽</span><p class="mb-0 small">Fútbol</p></div></div></div>
+            <div class="col-4 col-md-3 col-lg-2"><div class="card text-center shadow-sm h-100"><div class="card-body p-2 p-md-3"><span class="display-6">🏋️</span><p class="mb-0 small">GYM</p></div></div></div>
+            <div class="col-4 col-md-3 col-lg-2"><div class="card text-center shadow-sm h-100"><div class="card-body p-2 p-md-3"><span class="display-6">🎤</span><p class="mb-0 small">Cantar</p></div></div></div>
+            <div class="col-4 col-md-3 col-lg-2"><div class="card text-center shadow-sm h-100"><div class="card-body p-2 p-md-3"><span class="display-6">💻</span><p class="mb-0 small">Programar</p></div></div></div>
+        </div>
+
+        <!-- Video -->
+        <h2 class="text-center h4 mb-3"> Mi música favorita</h2>
+        <div class="ratio ratio-16x9 shadow-sm mb-4">
+            <iframe src="https://www.youtube.com/embed/Kr4EQDVETuA?si=vXRgKVp96FmNNMOS" title="Video musical" allowfullscreen></iframe>
+        </div>
+
+        <!-- Enlaces -->
+        <div class="d-flex flex-wrap justify-content-center gap-2 mb-4">
+            <a href="#formulario" class="btn btn-outline-primary btn-sm"> Ir al formulario</a>
+            <a href="https://www.google.com" target="_blank" class="btn btn-outline-success btn-sm">🔍 Visitar Google</a>
+        </div>
+
+        <!-- Tabla Destinos -->
+        <h2 class="text-center h4 mb-3">✈️ Destinos</h2>
+        <div class="table-responsive mb-4">
+            <table class="table table-striped table-bordered table-hover shadow-sm">
+                <thead class="table-primary"><tr><th>Ciudad</th><th>Motivo</th></tr></thead>
+                <tbody>
+                    <tr><td>🇫🇷 París</td><td>Torre Eiffel</td></tr>
+                    <tr><td>🇯🇵 Tokio</td><td>Cultura y tecnología</td></tr>
+                    <tr><td>🇮🇹 Roma</td><td>Lugares históricos</td></tr>
+                    <tr><td>🇩🇪 Alemania</td><td>Allianz Arena</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Formulario -->
+        <h2 id="formulario" class="text-center h4 mb-3"> Formulario</h2>
+        <div class="card shadow-sm mb-4">
+            <div class="card-body p-3 p-md-4">
+                <form>
+                    <div class="mb-2 mb-md-3">
+                        <label class="form-label fw-bold small">Nombre:</label>
+                        <input type="text" class="form-control form-control-sm" placeholder="Ej: Ariel Guamán" required>
+                    </div>
+                    <div class="mb-2 mb-md-3">
+                        <label class="form-label fw-bold small">Correo:</label>
+                        <input type="email" class="form-control form-control-sm" placeholder="ejemplo@correo.com" required>
+                    </div>
+                    <div class="mb-2 mb-md-3">
+                        <label class="form-label fw-bold small">Teléfono:</label>
+                        <input type="tel" class="form-control form-control-sm" placeholder="0999999999">
+                    </div>
+                    <div class="mb-2 mb-md-3">
+                        <label class="form-label fw-bold small">¿Cómo nos conociste?</label>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="conociste"><label class="form-check-label small">Redes sociales</label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="conociste"><label class="form-check-label small">Un amigo</label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="conociste"><label class="form-check-label small">Google</label></div>
+                    </div>
+                    <div class="mb-2 mb-md-3 form-check">
+                        <input type="checkbox" class="form-check-input" required>
+                        <label class="form-check-label small">Acepto términos</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100"> Enviar</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="modal fade" id="infoModal" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header bg-primary text-white">
+                        <h5 class="modal-title"> Información</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p><strong>Proyecto educativo</strong> - Desarrollo Web</p>
+                        <p><strong>Framework:</strong> Bootstrap 5</p>
+                        <p><strong>Autor:</strong> Ariel Guamán - UTPL</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navegación -->
+        <div class="d-flex flex-wrap justify-content-between gap-2 mt-4">
+            <a href="respuesta.html" class="btn btn-outline-secondary">← Paso 4</a>
+            <a href="index.html" class="btn btn-success">🏠 Inicio</a>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3 mt-4">
+        <p class="mb-0 small">Proyecto educativo - Cómo funciona la Web</p>
+    </footer>
+
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
